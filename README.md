@@ -1,6 +1,12 @@
-# Compartir su trabajo con sus clientes
+# Compartir su trabajo con sus clientes [Video](https://youtu.be/3UzlB8dkzXI)
 
 ## Motivación + Contexto
+
+>
+> [Video](https://youtu.be/7dz8S4RqLGk) en este video se explica en que contexto el *tunneling* es una respuesta a la exposición de recursos o servicios que se encuentran en una red de área local.
+>
+> [Video](https://youtu.be/vL4PRKEtTnU) en este video se explica como Inlets apoya a la materialización del concepto de Tunneling.
+>
 
 La motivación de este documento es el de mostrar un mecanismo con el cual se puede __compartir un servicio o un recurso__  con un cliente, jefe o un amigo; a través de Internet.
 Pero imagine que ese recurso/servicio se encuentra en una red privada y existen factores externos que dificultan que ese servicio sea expuesto en Internet.
@@ -64,17 +70,20 @@ Ejecute el siguiente comando:
 vagrant up
 ```
 
-> Y puede ir a preparase un :coffee:.
+> Y puede ir a preparase un :coffee:. [Aquí](https://youtu.be/VXjQxD-Kqu0) un :movie_camera: de la ejecución del comando.
 
 El siguiente paso en el proceso es crear el *Exit Node* en la plataforma GCP.
 
-### Creando el *Exit Node* de inlets
-
+### Creando el *Exit Node* de inlets [Video](https://youtu.be/IZ4arr-wePg)
 Para crear este *Exit Node* se debe ingresar a la máquina virtual:
 
 ```
 vagrant ssh 
 ```
+
+>
+> Una vez esté al interior de la máquina virtual debe inicializar la aplicación `gcloud` [Video](https://youtu.be/5REPG3IuDIM)
+> 
 
 Una vez dentro de la máquina virtual, [**lleve los pasos descritos en este video**](https://youtu.be/HsUD3Tz8L1s) para asociar el aplicativo `gcloud` con una cuenta en Google.
 
@@ -110,7 +119,7 @@ A continuación se describirá lo que hace el script:
 
 * Línea 57 - 64: Se presenta un mensaje por pantalla indicando algunas variables que se requieren para ejecutar el cliente de inlets que se comunicará con el contenedor que está en GCP.
 
-### Corriendo el servicio que desea exponer
+### Corriendo el servicio que desea exponer [Video](https://youtu.be/icTGC2kgbDk)
 
 En la clase anterior se trabajó un ejemplo de un web service que permitía el acceso a un *to do list*. 
 Se ha creado un contenedor con el aplicativo visto en la clase anterior. 
@@ -129,7 +138,7 @@ curl http://localhost:5000
 
 Debería aparecer en pantalla un saludo en inglés.
 
-### Ejecutando el cliente inlets
+### Ejecutando el cliente inlets [Video](https://youtu.be/F61dt-aBDn8)
 
 Hasta este punto usted ya tiene un *Exit Node* en GCP y tiene un servicio que desea exponer a los usuarios en Internet, el gestor de *to do list*.
 A continuación se ejecutará el servicio que pegará a estos procesos, uno corriendo en GCP y el otro en su infraestructura local.
@@ -145,7 +154,7 @@ Una vez modifique el script y guarde los cambios proceda a ejecutarlo.
 
 Una vez haya finalizado la ejecución del script anterior entonces usted se podrá acceder al servicio local a través de inlets desplegado en GCP.
 
-### Prueba del servicio
+### Prueba del servicio [Video](https://youtu.be/Eya21E24P-g)
 
 Para evidenciar que el aplicativo local se puede acceder remotamente y que el servicio accedido remotamente es el mismo local se llevarán a cabo las siguientes actividades.
 
