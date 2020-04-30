@@ -70,8 +70,23 @@ El siguiente paso en el proceso es crear el *Exit Node* en la plataforma GCP.
 
 ### Creando el *Exit Node* de inlets
 
-Para crear este *Exit Node* se debe ejecutar el script `/vagrant/GCP/crear-inlets-exit-node.sh`.
-A continuación se describirá línea por línea lo que hace el script:
+Para crear este *Exit Node* se debe ingresar a la máquina virtual:
+
+```
+vagrant ssh 
+```
+
+Una vez dentro de la máquina virtual, [**lleve los pasos descritos en este video**](https://youtu.be/HsUD3Tz8L1s) para asociar el aplicativo `gcloud` con una cuenta en Google.
+
+Una vez inicializado el aplicativo `gcloud`, se ejecutará el siguiente script:
+
+```
+/vagrant/GCP/crear-inlets-exit-node.sh
+```
+
+Este script como su nombre lo sugiere se encarga de crear el *Exit Node* en GCP.
+
+A continuación se describirá lo que hace el script:
 
 * Línea 1 - 4: Se crea el proyecto con nombre indicado en la variable `${PROJECT}`.
 
