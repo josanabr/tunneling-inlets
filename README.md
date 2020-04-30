@@ -160,6 +160,22 @@ curl http://localhost:5000/todo/api/v1.0/tasks
 Debería obtener una salida por pantalla similar a esta:
 
 ```
+{
+  "tasks": [
+    {
+      "description": "Milk, cheese, pizaa", 
+      "done": false, 
+      "id": 1, 
+      "title": "Buy groceries"
+    }, 
+    {
+      "description": "Need a good tutorial on the web", 
+      "done": false, 
+      "id": 2, 
+      "title": "Learn Python"
+    }
+  ]
+}
 ```
 
 * Ahora se creará una tarea __pero accediendo__ a través de inlets desplegado en GCP:
@@ -171,6 +187,14 @@ curl -X POST -d '{ "title": "write a book" }' -H "Content-type: application/json
 Debería obtener una salida por pantalla similar a esta:
 
 ```
+{
+  "task": {
+    "description": "", 
+    "done": false, 
+    "id": 3, 
+    "title": "write a book"
+  }
+}
 ```
 
 * Finalmente se hará una consulta al servicio local para validar que la nueva tarea fue creada:
@@ -182,6 +206,28 @@ curl http://localhost:5000/todo/api/v1.0/tasks
 Debería obtener una salida por pantalla similar a esta:
 
 ```
+{
+  "tasks": [
+    {
+      "description": "Milk, cheese, pizaa", 
+      "done": false, 
+      "id": 1, 
+      "title": "Buy groceries"
+    }, 
+    {
+      "description": "Need a good tutorial on the web", 
+      "done": false, 
+      "id": 2, 
+      "title": "Learn Python"
+    }, 
+    {
+      "description": "", 
+      "done": false, 
+      "id": 3, 
+      "title": "write a book"
+    }
+  ]
+}
 ```
 ---
 
