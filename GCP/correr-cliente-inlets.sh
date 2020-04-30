@@ -2,7 +2,7 @@
 REMOTE=
 TOKEN=
 DIGEST=
-UPSTREAM="localhost:5000""
+UPSTREAM="localhost:5000"
 docker run \
 --interactive --tty \
 --net=host \
